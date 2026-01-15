@@ -19,12 +19,15 @@ def create_user(db: Session,captchaa:schemas.CaptchaSchema, user: schemas.UserDa
     
     hashed_pw=auth.hash_password(user.user_password)
     new_user = models.UserCreate(
-        user_name=user.user_name, 
+        user_name=user.user_name,
         user_email=user.user_email,
         user_fullname=user.user_fullname,
+        user_phone=user.user_phone,
+        user_gender=user.user_gender,
+        user_dob=str(user.user_dob),
         user_bio=user.user_bio,
-        user_createdat=user.user_createdat,
-        user_password=hashed_pw
+        user_password=hashed_pw,
+        user_created_dt=str(datetime.utcnow())
     )
     db.add(new_user)
     db.commit()
@@ -54,7 +57,7 @@ def update_user(token:str,db: Session, user: schemas.UserUpdatedData):
     db_user.user_fullname=user.user_fullname
     db_user.user_bio=user.user_bio
     # db_user.user_createdat=user.user_updatedat
-    db_user.user_createdat=datetime.utcnow()
+    db_user.user_created_dt=datetime.utcnow()
     db.commit()
     db.refresh(db_user) 
     # return f"{db_user} UserData Update Successfully.!" 
@@ -64,7 +67,7 @@ def update_user(token:str,db: Session, user: schemas.UserUpdatedData):
         user_email=db_user.user_email,
         user_fullname=db_user.user_fullname,
         user_bio=db_user.user_bio,
-        user_updatedat=user.user_updatedat,
+        user_updated_dt=user.user_updated_dt,
 
     )
 

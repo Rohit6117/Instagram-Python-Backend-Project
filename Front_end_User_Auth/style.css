@@ -1,0 +1,170 @@
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #6a11cb, #2575fc);
+    padding: 20px;
+}
+
+/* =========================
+   CARD
+========================= */
+.card {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* =========================
+   HEADING
+========================= */
+.card h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* =========================
+   FORM FIELDS
+========================= */
+.card input,
+.card select,
+.card textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.card input:focus,
+.card select:focus,
+.card textarea:focus {
+    border-color: #2575fc;
+}
+
+/* =========================
+   TEXTAREA
+========================= */
+.card textarea {
+    resize: vertical;
+    min-height: 70px;
+}
+
+/* =========================
+   SUBMIT BUTTON
+========================= */
+.card button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2575fc;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.card button[type="submit"]:hover {
+    background-color: #6a11cb;
+}
+
+/* =========================
+   CAPTCHA
+========================= */
+.captcha-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 12px 0;
+}
+
+#captchaText {
+    flex: 1;
+    background: #6a1b9a;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    letter-spacing: 3px;
+    border-radius: 8px;
+    user-select: none;
+}
+
+/* Refresh Button */
+.captcha-row .refresh-btn {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border-radius: 50%;
+    border: none;
+    background: #6a1b9a;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.captcha-row .refresh-btn:hover {
+    background: #4a148c;
+}
+
+/* =========================
+   LINK
+========================= */
+.card .link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.card .link a {
+    color: #2575fc;
+    text-decoration: none;
+}
+
+.card .link a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 500px) {
+    .card {
+        padding: 30px 20px;
+    }
+
+    .card h2 {
+        font-size: 22px;
+    }
+
+    .card input,
+    .card select,
+    .card textarea,
+    .card button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}

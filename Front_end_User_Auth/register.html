@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+    <h2>Create Account</h2>
+
+    <form id="registerForm">
+        <input id="user_name" placeholder="Username" required>
+        <input id="user_email" type="email" placeholder="Email" required>
+        <input id="user_fullname" placeholder="Full Name" required>
+        <input id="user_phone" placeholder="Phone" required>
+        
+        <select id="user_gender" required>
+            <option value="">Select Gender</option>
+            <option>Male</option>
+            <option>Female</option>
+        </select>
+
+        <input id="user_dob" type="date" required>
+        <textarea id="user_bio" placeholder="Bio"></textarea>
+        <input id="user_password" type="password" placeholder="Password" required>
+
+        <div class="captcha-row">
+            <button type="button" class="refresh-btn" onclick="loadCaptcha()">↻</button>
+            <div id="captchaText" style="font-family: monospace; font-weight: bold; letter-spacing: 3px;"></div>
+        </div>
+
+        <input id="captcha_text" type="text" placeholder="Enter captcha" required>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div class="link">
+        Already have an account? <a href="login.html">Login</a>
+    </div>
+</div>
+
+<script src="register.js"></script>
+</body>
+</html>
