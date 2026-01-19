@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Instagram Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo">Instagram</div>
+
+    <div class="nav-icons">
+        <button class="icon-btn" onclick="openFile()">
+            <i class="fa-solid fa-square-plus"></i>
+        </button>
+        <i class="fa-regular fa-heart"></i>
+        <i class="fa-regular fa-user"></i>
+        <input type="file" id="fileInput" accept="image/*" hidden>
+    </div>
+</header>
+
+<!-- STORIES -->
+<div class="stories">
+    <div class="story active">You</div>
+    <div class="story">Alex</div>
+    <div class="story">Sam</div>
+    <div class="story">John</div>
+    <div class="story">Emma</div>
+</div>
+
+<!-- FEED -->
+<main class="feed" id="feed"></main>
+
+<script src="dashboard.js"></script>
+</body>
+</html>

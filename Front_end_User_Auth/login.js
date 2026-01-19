@@ -23,6 +23,7 @@
 //     document.getElementById("error").textContent = "";
 // }
 function login() {
+    event.preventDefault();
     const userId = document.getElementById("user_id").value;
     const password = document.getElementById("password").value;
 
@@ -46,7 +47,7 @@ function login() {
     .then(data => {
         if (data.access_token) {
             localStorage.setItem("token", data.access_token);
-            window.location.href = "dashboard.html";
+            window.location.href = "http://127.0.0.1:5500/Front_end_User_Auth/DashBoard/dashboard.html";
         } else {
             document.getElementById("error").textContent = "Invalid credentials";
         }
